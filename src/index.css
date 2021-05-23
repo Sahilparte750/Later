@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables */
+
+:root {
+  --background: #f0f0f0;
+  --white: #ffffff;
+  --black: #000;
+  --text-grey: rgba(0, 0, 0, 0.6);
+  --grey: #e5e5e5;
+  --purple: #a259ff;
+  --red: #e16259;
+  --transition: all 0.3s linear;
+  --spacing: 0.4px;
+  --shadow: 0 0 8px rgba(70, 62, 62, 0.2);
+}
+
+/* globals */
+
+body {
+  background: var(--background);
+  font-family: Roboto;
+  font-style: normal;
+  letter-spacing: var(--spacing);
+}
+section {
+  width: 75%;
+  height: 100vh;
+  margin: 0px auto;
+}
+.loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+}
+
+/* end of globals */
+
+/* Navbar */
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+}
+
+ul li {
+  border: none;
+}
+
+.nav-toggle {
+  font-size: 17px;
+  color: var(--black);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--red);
+  transform: rotate(90deg);
+}
+.links a {
+  color: var(--black);
+  font-size: 17px;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 10px 17px;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--red);
+  color: var(--white);
+  padding-left: 1.5rem;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+/* .show-container {
+  height: 10rem;
+} */
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  ul li:first-child {
+    border-bottom: 2px solid var(--red);
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 10px;
+  }
+  .links a:hover {
+    padding: 0;
+    color: var(--black);
+    background: transparent;
+  }
+}
+
+/* end of navbar */
+
+/*>>>>>>>>>>>>>>>container<<<<<<<<<<<<<<<<<*/
+
+/* Header start */
+
+.container {
+  padding: 1rem;
+}
+
+.header {
+  background: var(--white);
+  width: 60%;
+  display: flex;
+  margin: 70px auto;
+  padding: 70px 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  width: 30%;
+  text-align: center;
+}
+
+.hero-detail {
+  width: 70%;
+}
+
+.hero-detail h1 {
+  font-size: 64px;
+  margin-bottom: 7px;
+}
+.hero-detail p:last-child {
+  margin-top: 7px;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.header h1 {
+  font-size: 55px;
+  color: var(--red);
+}
+
+@media (max-width: 1400px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 30px 10px;
+    margin: 25px auto;
+  }
+
+  .hero {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-detail {
+    width: 100%;
+  }
+  .hero-detail h1 {
+    margin: 8px 0;
+    font-size: 35px;
+  }
+}
+
+/* Header end */
+
+/* Box start */
+
+.box h2 {
+  margin: 6px 0;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.box-change {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.box {
+  width: 322px;
+  background-color: var(--white);
+  padding: 18px 25px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+}
+
+.box a {
+  color: var(--red);
+}
+.box p {
+  color: var(--text-grey);
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.active a {
+  color: var(--white);
+}
+
+.active p {
+  color: var(--white);
+}
+
+.inactive {
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 350px;
+    display: block;
+    margin: 12px auto;
+  }
+}
+
+/* Box end */
+
+/*>>>>>>>>>>>> end of container <<<<<<<<<<<<< */
